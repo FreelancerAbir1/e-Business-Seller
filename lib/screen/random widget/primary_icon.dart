@@ -8,17 +8,20 @@ class PrimaryIcons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 200,
-      width: 200,
-      decoration: BoxDecoration(
-          color: kBlackColor,
-          borderRadius: BorderRadius.circular(20),
-          border: Border.all(
-            width: 02,
-          )),
-      child: Image.asset(
-        'assets/icons/main_logo.jpg',
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 10),
+      child: Container(
+        height: 150,
+        width: 100,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(
+              width: 02,
+            )),
+        child: Image.asset(
+          'assets/icons/logo.png',
+          color: kBlue,
+        ),
       ),
     );
   }

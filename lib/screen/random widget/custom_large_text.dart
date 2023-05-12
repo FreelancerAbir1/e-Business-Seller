@@ -13,12 +13,15 @@ class CustomLargeText extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) {
-    return AutoSizeText(
-      "$text!",
-      style: Theme.of(context)
-          .textTheme
-          .headlineSmall!
-          .copyWith(fontFamily: bold, color: color),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: AutoSizeText(
+        "$text!",
+        style: Theme.of(context)
+            .textTheme
+            .headlineSmall!
+            .copyWith(fontFamily: bold, color: color),
+      ),
     );
   }
 }
