@@ -23,7 +23,6 @@ class Tablet extends StatelessWidget {
         const Align(
             alignment: Alignment.bottomCenter,
             child: CircularProgressIndicator()),
-
       ],
     );
   }

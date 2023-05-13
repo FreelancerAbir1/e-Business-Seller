@@ -24,7 +24,6 @@ class MyApp extends StatelessWidget {
         title: appName,
         debugShowCheckedModeBanner: false,
         initialBinding: InitialBindings(),
-        themeMode: ThemeMode.light,
         theme: buildThemeData(),
         //   home: const SplashScreen(),
         initialRoute: SplashScreen.routeName,
@@ -61,6 +60,7 @@ ThemeData buildThemeData() {
     ),
     appBarTheme: const AppBarTheme(
       backgroundColor: kTransparentColor,
+      foregroundColor: kBlackColor,
       elevation: 0,
     ),
   );

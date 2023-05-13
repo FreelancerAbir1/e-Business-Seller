@@ -16,3 +16,4 @@ export 'package:ebusiness/auth%20screen/login%20screen/component/admin_text.dart
 export 'package:ebusiness/auth%20screen/login%20screen/login_screen.dart';
 export 'package:flutter/material.dart';
 export 'package:ebusiness/auth%20screen/login%20screen/component/sign_up_btn.dart';
+export 'package:animated_floating_buttons/widgets/animated_floating_action_button.dart';
