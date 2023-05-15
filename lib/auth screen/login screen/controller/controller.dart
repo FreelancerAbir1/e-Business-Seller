@@ -1,6 +1,4 @@
-import 'package:animated_floating_buttons/widgets/animated_floating_action_button.dart';
-import 'package:flutter/rendering.dart';
-import 'package:get/get.dart';
+ import 'package:get/get.dart';
 import '../../../const/export.dart';
 
 class LoginScreenController extends GetxController {

@@ -1,4 +1,3 @@
-import 'package:ebusiness/auth%20screen/login%20screen/controller/controller.dart';
 import 'package:get/get.dart';
 
 import '../../const/export.dart';
@@ -11,14 +10,10 @@ class LoginScreen extends GetView<LoginScreenController> {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(() {
-      return Scaffold(
-          appBar: Responsive.isMobile(context) && controller.isScroll.value
-              ? AppBar()
-              : null,
-          body: Body()
-      );
-    });
+    return Scaffold(
+
+        body: Body()
+    );
   }
 }
 

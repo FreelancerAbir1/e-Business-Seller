@@ -1,6 +1,8 @@
-import 'package:ebusiness/auth%20screen/login%20screen/controller/controller.dart';
-import 'package:ebusiness/screen/bottom%20nav/bottom_nav_bar.dart';
+
+import 'package:ebusiness/screen/random%20widget/custom_medium_text.dart';
+import 'package:ebusiness/screen/random%20widget/custom_small_text.dart';
 import 'package:get/get.dart';
+import 'package:sign_in_button/sign_in_button.dart';
 
 import '../../../const/export.dart';
 
@@ -26,11 +28,12 @@ class Mobile extends GetView<LoginScreenController> {
                     CustomLargeText(text: 'Welcome Back', color: kPrimaryColor)),
             Align(alignment: Alignment.topLeft, child: PrimaryIcons()),
             Container(
-              height: 350,
+              height: Get.height/2.4,
               width: Get.width,
               padding: EdgeInsets.all(10),
               margin: EdgeInsets.symmetric(horizontal: 8),
               decoration: BoxDecoration(
+                color: kLightColor,
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: [
                   BoxShadow(
@@ -56,17 +59,12 @@ class Mobile extends GetView<LoginScreenController> {
                       icon: controller.isPassword.value?Icon(Icons.visibility): Icon(Icons.visibility_off),
                     ),
                   ),),
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: Text(
-                        'Forgot Password',
-                        style: TextStyle(
-                            color: kPrimaryColor,
-                            decoration: TextDecoration.underline),
-                      ),
-                    ),
+                  CustomMediumText(
+                    onTap: () {
+                    //  Get.toNamed(ForgotScreen.routeName);
+                    },
+                    text: 'Forget Password',
+                    alignMent: Alignment.centerRight,
                   ),
                   CustomButton(
                     onTap: () {
@@ -75,11 +73,8 @@ class Mobile extends GetView<LoginScreenController> {
                     text: 'Sign In',
                     color: kPrimaryColor,
                   ),
-                  SignUpButton(
-                    onTap: () {},
-                    text: 'Dont\'t have an account?',
-                    txt: ' Sign Up',
-                  ),
+                  const CustomSmallText(
+                      text: 'Don\'t have an account?', alignMent: Alignment.center),
                   CustomButton(
                     onTap: () {},
                     text: 'Sign Up',
@@ -88,8 +83,35 @@ class Mobile extends GetView<LoginScreenController> {
                 ],
               ),
             ),
-            SizedBox(
-              height: 10.h,
+            SizedBox(height: 2.h,),
+            SignInButton(
+              Buttons.google,
+              onPressed: () {},
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                SignInButton(
+                  Buttons.linkedIn,
+                  mini: true,
+                  onPressed: () {},
+                ),
+                SignInButton(
+                  Buttons.twitter,
+                  mini: true,
+                  onPressed: () {},
+                ),
+                SignInButton(
+                  Buttons.gitHub,
+                  mini: true,
+                  onPressed: () {},
+                ),
+                SignInButton(
+                  Buttons.facebook,
+                  mini: true,
+                  onPressed: () {},
+                ),
+              ],
             ),
             Align(
               alignment: Alignment.bottomCenter,

@@ -1,8 +1,6 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
-import '../../const/color.dart';
-import '../../const/style.dart';
+import '../../const/export.dart';
 
 class CustomButton extends StatelessWidget {
   final GestureTapCallback onTap;
